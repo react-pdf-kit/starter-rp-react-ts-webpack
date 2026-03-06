@@ -59,18 +59,27 @@ Once the example project is running, you can explore the source code to see how 
 1.  **Import the component**: Import the desired React PDF component into your codes
 
 ```tsx
+import React from "react";
 import {
   RPProvider,
   RPLayout,
   RPPages,
+  RPProviderProps,
+  RPLayoutProps,
 } from "@react-pdf-kit/viewer";
 
-export const AppPDFViewer = (props) => {
+interface Props {
+  showToolbar?: boolean;
+  providerProps?: RPProviderProps;
+  defaultLayoutProps?: RPLayoutProps;
+}
+
+export const AppPdfViewer = (props: Props) => {
   const { showToolbar = true, providerProps, defaultLayoutProps } = props;
 
   return (
     <RPProvider
-      src="https://cdn.codewithmosh.com/image/upload/v1721763853/guides/web-roadmap.pdf"
+      src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf"
       {...providerProps}
     >
       {showToolbar ? (
@@ -90,9 +99,10 @@ export const AppPDFViewer = (props) => {
 2. **Use the component in the template**: Add the React PDF component to your template section
 
 ```tsx
+import React from "react";
 import "./App.css";
 import { RPConfig } from "@react-pdf-kit/viewer";
-import { AppPDFViewer } from "./components/AppPDFViewer";
+import { AppPdfViewer } from "./components/AppPdfViewer";
 
 function App() {
   return (
