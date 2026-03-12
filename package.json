@@ -31,7 +31,7 @@
     "webpack-dev-server": "5.2.0"
   },
   "dependencies": {
-    "@react-pdf-kit/viewer": "^2.0.0",
+    "@react-pdf-kit/viewer": "latest",
     "pdfjs-dist": "5.4.624",
     "react": "18.2.0",
     "react-dom": "18.2.0"

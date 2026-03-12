@@ -2,7 +2,7 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github.com/react-pdf-kit/starter-rp-react-ts-webpack)
 
-Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, TypeScript and Webpack. It showcases how React PDF can be integrated and rendered as part of a React.js project.
+Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React, TypeScript and Webpack. It showcases how  the React Viewer component can be integrated and rendered as part of a React.js project.
 
 ## Table of Contents
 
@@ -111,16 +111,16 @@ function App() {
         <h1>React PDF Kit Starter Toolkit in React.js, TypeScript and Webpack</h1>
         <br />
         <h2>Default Toolbar</h2>
-        <AppPDFViewer />
+        <AppPdfViewer />
         <h2>Without Toolbar</h2>
-        <AppPDFViewer
+        <AppPdfViewer
           showToolbar={false}
           defaultLayoutProps={{
             style: { width: "100%", height: "550px" },
           }}
         />
         <h2>Mobile</h2>
-        <AppPDFViewer
+        <AppPdfViewer
           defaultLayoutProps={{
             style: { width: "500px" },
           }}
